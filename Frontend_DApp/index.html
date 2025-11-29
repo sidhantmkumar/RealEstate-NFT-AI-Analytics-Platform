@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Real Estate NFT Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🏠 Real Estate NFT Dashboard</h1>
+    <p class="sub">Mint • List • Buy • Verify Ownership</p>
+
+    <button id="connectBtn" class="btn">Connect Wallet</button>
+    <p id="walletAddress" class="info"></p>
+
+    <hr>
+
+    <!-- Mint Section -->
+    <section>
+        <h2>Mint Property NFT</h2>
+        <input type="number" id="mintPropertyId" placeholder="Property ID">
+        <input type="text" id="mintTo" placeholder="Wallet Address to Mint To">
+        <input type="text" id="metadataURI" placeholder="Metadata URI (IPFS URL)">
+        <button class="btn" onclick="mintNFT()">Mint</button>
+        <p class="log" id="mintLog"></p>
+    </section>
+
+    <hr>
+
+    <!-- List Section -->
+    <section>
+        <h2>List Property For Sale</h2>
+        <input type="number" id="listTokenId" placeholder="NFT Token ID">
+        <input type="number" id="listPrice" placeholder="Sale Price in Wei">
+        <button class="btn" onclick="listNFT()">List NFT</button>
+        <p class="log" id="listLog"></p>
+    </section>
+
+    <hr>
+
+    <!-- Buy Section -->
+    <section>
+        <h2>Buy Property</h2>
+        <input type="number" id="buyTokenId" placeholder="Token ID to Buy">
+        <button class="btn" onclick="buyNFT()">Buy</button>
+        <p class="log" id="buyLog"></p>
+    </section>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/ethers/dist/ethers.umd.min.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
